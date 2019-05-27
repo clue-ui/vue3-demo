@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <div class="title">测试tailwin-css</div>
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
@@ -16,3 +17,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.home {
+  .title {
+    @apply text-red-600;
+  }
+}
+</style>

@@ -1,0 +1,13 @@
+
+/**
+ * [文本超出多行就隐藏并且显示省略号]
+ * @param  {[type]} $line [description]
+ * @return {[type]}       [description]
+ */
+@mixin line-clamp($line) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+}

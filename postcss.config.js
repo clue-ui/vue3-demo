@@ -1,5 +1,9 @@
 module.exports = {
-  plugins: {
-    autoprefixer: {}
-  }
+  plugins: [
+    // autoprefixer
+    require('autoprefixer'),
+
+    // tailwindcss
+    require('tailwindcss')
+  ]
 }
