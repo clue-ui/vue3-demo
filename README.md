@@ -27,3 +27,11 @@ yarn run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## 组建包
+ * vue-router
+ * vuex
+ * scss
+ * tailwindcss
+ * moment
+ * axios

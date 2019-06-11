@@ -10,5 +10,20 @@ exports.install = function (Vue, option) {
     setTitle: function (val) {
       document.title = val
     }
+  },
+
+  /**
+   * [$document description]
+   * @type {Object}
+   */
+  Vue.prototype.$document = {
+    /**
+     * 获取屏幕宽度
+     * @return {[type]} [description]
+     */
+    screenWidth: function () {
+      let w = window.screen.width
+      return w || null
+    }
   }
 }
