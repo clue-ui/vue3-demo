@@ -38,13 +38,19 @@ let post = (url, params) => {
 
 /**
  * [description]
+ * @param  {[type]} url    [description]
+ * @param  {[type]} params [description]
  * @param  {[type]} option [description]
  * @return {[type]}        [description]
+ *
+ * axios.upload(url, {
+ *   file: 需要上的文件,
+ *   key:value
+ * }).then((res) => {
+ *   ...
+ * })
  */
-let upload = (option) => {
-  let {url, params, onUploadProgress} = option
-
-  // create form data
+let upload = (url, params = null, option = null) => {
   let formData = newForm(params)
 
   return new Promise((resolve, reject) => {
@@ -53,8 +59,8 @@ let upload = (option) => {
         'Content-Type': 'multipart/form-data'
       },
       onUploadProgress: function (event) {
-        if (onUploadProgress) {
-          onUploadProgress(event)
+        if (option && option.onUploadProgress) {
+          option.onUploadProgress(event)
         }
       }
     }).then((response) => {
